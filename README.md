@@ -39,6 +39,23 @@ Self-host your **photo and video server** with **privacy**, **convenience**, and
 6. Connect via SSH:
    ```bash
    ssh pi@raspberrypi.local
+   ```
+
+### 2️⃣ Connect Raspberry Pi to Internet via Tailscale
+
+💡 Tailscale allows secure private networking without public IP or port forwarding.
+
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+```
+
+#### Sign in via browser when prompted.
+#### Get your Pi’s Tailscale IP:
+```bash
+tailscale ip -4
+```
+
 
 
 

@@ -42,34 +42,5 @@ Self-host your **photo and video server** with **privacy**, **convenience**, and
    ssh pi@raspberrypi.local
 
 
-#!/bin/bash
-
-echo "=== Step 1: Flash and Set Up Debian on Raspberry Pi ==="
-
-echo ""
-echo "1. Download Raspberry Pi Imager:"
-echo "   👉 https://www.raspberrypi.com/software/"
-echo ""
-
-echo "2. Choose:"
-echo "   - Raspberry Pi OS Lite (64-bit) OR Debian Bookworm Lite"
-echo "   - Flash it to your SD card via GUI"
-echo ""
-
-read -p "➡️ Press Enter after flashing the image..."
-
-BOOT_PART="/Volumes/boot"  # On Linux it may be /media/$USER/boot
-if [ -d "$BOOT_PART" ]; then
-    touch "$BOOT_PART/ssh"
-    echo "✅ SSH enabled by creating $BOOT_PART/ssh"
-else
-    echo "⚠️ Could not detect boot partition. Please manually create a file named 'ssh' in the boot partition."
-fi
-
-echo ""
-echo "Now insert the SD card into your Raspberry Pi and boot it up."
-echo "To connect via SSH:"
-echo "   ssh pi@raspberrypi.local"
-
 
 

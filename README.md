@@ -146,44 +146,50 @@ docker ps
 
 ---
 
-## 5️⃣ Access Immich via Tailscale
+### 5️⃣ Access Immich via Tailscale
 
-💡 Open Immich from any device connected to your Tailscale network.
-
-
-# Step 5: Access Immich web interface
-
-# Replace with the actual IP from Step 2
+💡 Open Immich from any device connected to your Tailscale network.  
+Access Immich web interface. 
+Replace with the actual IP from Step 2  
+```bash
 http://<tailscale-pi-ip>:2283
-
-
+```
 - Log in or create an account.
 
 📸 *Screenshot Placeholder: Immich login page*
 
 ---
 
-## 6️⃣ (Optional) Use External USB Storage
+### 6️⃣ (Optional) Use External USB Storage
 
 💡 Store uploaded photos/videos on an external drive instead of SD card.
 
 
-# Step 6: Mount USB drive to store media
-
+#### Mount USB drive to store media
+```bash
 sudo mkdir /media/photos
 sudo mount /dev/sda1 /media/photos  # Replace sda1 with actual device name
+```
 
-# Update docker-compose.yml volume:
-# Replace:
-#   - ./upload:/usr/src/app/upload
-# With:
-#   - /media/photos:/usr/src/app/upload
+Update docker-compose.yml volume:  
+Replace:
+```bash
+   - ./upload:/usr/src/app/upload
+```
+With:
+```bash
+   - /media/photos:/usr/src/app/upload
+```
 
-# Auto-mount on reboot: edit fstab
+Auto-mount on reboot: edit fstab
+```bash
 sudo nano /etc/fstab
+```
 
-# Add this line (adjust fs type if not ext4):
+Add this line (adjust fs type if not ext4):
+```bash
 /dev/sda1  /media/photos  ext4  defaults  0  2
+```
 
 
 📸 *Screenshot Placeholder: USB drive mounted and used for media*
@@ -194,8 +200,9 @@ sudo nano /etc/fstab
 
 - 📱 Immich mobile app supports **automatic photo upload**.
 - 🐳 Ensure Docker starts on boot:
-  
+  ```bash
   sudo systemctl enable docker
+  ```
   
 - 🔒 Tailscale allows **secure access** to your Pi from anywhere without needing static IP or port forwarding.
 

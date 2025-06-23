@@ -1,4 +1,4 @@
-# 📸 Immich on Raspberry Pi with Debian, Docker, and Tailscale
+# Self-Hosted-Photo-Backup-System using Raspberry Pi
 
 Self-host your **photo and video server** with **privacy**, **convenience**, and **remote access** using Immich on a **Raspberry Pi**.
 
@@ -50,8 +50,8 @@ curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 ```
 
-Sign in via browser when prompted.
-Get your Pi’s Tailscale IP:
+#Sign in via browser when prompted.
+#Get your Pi’s Tailscale IP:
 ```bash
 tailscale ip -4
 ```

@@ -50,8 +50,8 @@ curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 ```
 
-#### Sign in via browser when prompted.
-#### Get your Pi’s Tailscale IP:
+Sign in via browser when prompted.
+Get your Pi’s Tailscale IP:
 ```bash
 tailscale ip -4
 ```

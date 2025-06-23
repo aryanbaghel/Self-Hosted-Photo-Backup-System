@@ -41,6 +41,15 @@ Self-host your **photo and video server** with **privacy**, **convenience**, and
    ```bash
    ssh pi@raspberrypi.local
 
+# Step 2: Install and connect Tailscale
+
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+
+# Sign in via browser when prompted.
+# Get your Pi’s Tailscale IP:
+tailscale ip -4
+
 
 
 

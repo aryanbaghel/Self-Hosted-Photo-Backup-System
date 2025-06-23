@@ -1,6 +1,5 @@
 # Self-Hosted-Photo-Backup-System using Raspberry Pie
 
-# 📸 Immich on Raspberry Pi with Debian, Docker, and Tailscale
 
 Self-host your **photo and video server** with **privacy**, **convenience**, and **remote access** using Immich on a **Raspberry Pi**.
 

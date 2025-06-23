@@ -221,7 +221,8 @@ Add this line (adjust fs type if not ext4):
 
 ## 📄 License
 
-**MIT**
+This project is licensed under the [MIT License](LICENSE).
+
 
 ---
 
